@@ -9,7 +9,7 @@ The low altitude bombing system was introduced to assist with nuclear weapons de
 ### Pitch and Roll Indicator
 ![labs](./img/labs.png)
 
-Indicates the current desired roll from 9 degress to wings level left and right. Climb Dive indicates the desired G load in pullup mode and desired pitch angle(wings level) in pre-pullup mode. You will need to keep the wings level and thus roll at 0 and be on "G" for a correct auto release for the given LABS or LADD release mode. Maintain correct G by keeping the horizontal bar centered between the lines.
+The vertical needle indicates the current desired roll from 9 degress to wings level left and right. The horizontal needle indicates both the desired G load in pullup mode and desired pitch angle(straight and level) in pre-pullup mode. You will need to keep the wings level and thus roll at 0 and be on "G" during pull up for a correct auto release for the given LABS or LADD release mode. Maintain correct G by keeping the horizontal bar centered between the lines.
 
 ### Pullup Light
 ![labs_light](./img/labs_release_light.png)
