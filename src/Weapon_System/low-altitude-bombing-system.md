@@ -38,7 +38,7 @@ can then be used to figure out what should be set for the pullup timer. Both gro
 
 Bomb travel distance is determined by the exact release parameters of the bomb: including release angle, true airspeed, target altitude, aircraft altitude, bomb type and wind.
 
-Using all this information we can begin using LABS and LADD delivery as they function similarly. Pluging in all the correct data we want to be pointed at the target and press the weapon release at the indentification point (IP), the LABS release light will then illuminate. Once it is extinguished after our LABS timer setting has ended begin pulling and maintain wings level and be on "G" using the LABS gauge. Release will then automatically occur depending on the release mode chosen.
+Using all this information we can begin using LABS and LADD delivery as they function similarly. Pluging in all the correct data we want to be pointed at the target and press the weapon release at the indentification point (IP), the LABS release light will then illuminate. Once it is extinguished after our LABS timer setting has ended begin pulling and maintain wings level and be on "G" using the LABS gauge. Release will then automatically occur depending on the release mode chosen. 50 degress for LABS and 120 degrees for LABS ALT.
 
 ### LABS (Loft)
 
