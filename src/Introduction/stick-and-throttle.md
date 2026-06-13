@@ -42,8 +42,8 @@ Fuel flow to the engine is mechanically controlled by the pilot via the throttle
 |-----------|------|
 | 1         | [Throttle Friction Lever](#throttle-friction-lever)|
 | 2         | [Speed Brake Switch](#speed-brake-switch) |
-| 3         | [Microphone Button](#microphone-button) |
-| 4         | [Sight Electrical Caging Button and LABS Vertical Gyro Caging Button](../Weapon_System/a-4-gunsight.md#electrical-cage-button) |
+| 3         | [Sight Electrical Caging Button and LABS Vertical Gyro Caging Button](../Weapon_System/a-4-gunsight.md#electrical-cage-button) |
+| 4         | [Microphone Button](#microphone-button) |
 
 ### Throttle Friction Lever
 The Throttle Friction Lever adjusts how much friction the throttle has. Moving the lever forward increases the friction on the throttle
