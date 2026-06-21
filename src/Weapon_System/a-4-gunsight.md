@@ -51,7 +51,7 @@ The primary or secondary filament in the dual-filament sight reticle bulb powere
 
 ### Manual Ranging Control (Throttle)
 
-for automatic radar ranging, the throttle grip is normally in the full counter-clockwise position. Twisting the throttle grip clockwise decreases range from 2,700–12,000 feet.
+for automatic radar ranging, the throttle grip is normally in the full counter-clockwise position. Twisting the throttle grip clockwise decreases range from 12,000–2,700 feet.
 
 Rotating the throttle full counter-clockwise returns ranging to automatic operation.
 
