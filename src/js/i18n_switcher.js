@@ -23,49 +23,106 @@
 
   function getBasePath() {
     var path = window.location.pathname;
-    // Detect if we're in a subdirectory like /f-100d-manual/
-    var match = path.match(/^\/[^\/]+/);
-    if (match && match[0] !== "/" && !LANGUAGES.some(function(l) { return path.startsWith("/" + l.code + "/"); })) {
-      return match[0];
+    var parts = path.split("/").filter(function(p) { return p; });
+    
+    // Check if first segment is a language code
+    var firstIsLang = LANGUAGES.some(function(l) { return l.code === parts[0]; });
+    
+    if (firstIsLang && parts.length > 1) {
+      // Structure: /fr/f-100d-manual/ -> base is /fr, repo is /f-100d-manual
+      return "/" + parts[0];
+    } else if (!firstIsLang && parts.length > 0) {
+      // Structure: /f-100d-manual/ or /f-100d-manual/fr/
+      var secondIsLang = parts.length > 1 && LANGUAGES.some(function(l) { return l.code === parts[1]; });
+      if (secondIsLang) {
+        // /f-100d-manual/fr/ -> base is /f-100d-manual
+        return "/" + parts[0];
+      } else {
+        // /f-100d-manual/ -> base is /f-100d-manual
+        return "/" + parts[0];
+      }
     }
     return "";
   }
 
-  function detectCurrentLang() {
+  function getRepoPath() {
     var path = window.location.pathname;
     var basePath = getBasePath();
-    var pathWithoutBase = basePath ? path.slice(basePath.length) : path;
+    var parts = path.split("/").filter(function(p) { return p; });
     
+    if (basePath && parts.length > 0) {
+      var firstIsLang = LANGUAGES.some(function(l) { return l.code === parts[0]; });
+      if (firstIsLang && parts.length > 1) {
+        // /fr/f-100d-manual/ -> repo is /f-100d-manual
+        return "/" + parts[1];
+      }
+    }
+    return basePath;
+  }
+
+  function detectCurrentLang() {
+    var path = window.location.pathname;
+    var parts = path.split("/").filter(function(p) { return p; });
+    
+    // Check first segment (for /fr/f-100d-manual/ structure)
     for (var i = 0; i < LANGUAGES.length; i++) {
       var lang = LANGUAGES[i];
-      if (lang.code !== "en" && pathWithoutBase.startsWith(lang.path)) {
+      if (lang.code !== "en" && parts[0] === lang.code) {
         return lang.code;
       }
     }
+    
+    // Check second segment (for /f-100d-manual/fr/ structure)
+    if (parts.length > 1) {
+      for (var i = 0; i < LANGUAGES.length; i++) {
+        var lang = LANGUAGES[i];
+        if (lang.code !== "en" && parts[1] === lang.code) {
+          return lang.code;
+        }
+      }
+    }
+    
     return "en";
   }
 
   function buildTargetUrl(lang) {
     var currentPath = window.location.pathname;
     var basePath = getBasePath();
+    var repoPath = getRepoPath();
     var currentLang = detectCurrentLang();
+    var parts = currentPath.split("/").filter(function(p) { return p; });
+    
+    // Detect URL structure: lang before repo (/fr/f-100d-manual/) or after repo (/f-100d-manual/fr/)
+    var firstIsLang = LANGUAGES.some(function(l) { return l.code === parts[0]; });
+    var langBeforeRepo = firstIsLang && parts.length > 1;
+    
+    // Strip language and repo path to get the page path
     var stripped = currentPath;
-
     if (currentLang !== "en") {
-      var prefix = basePath + "/" + currentLang;
-      if (currentPath.startsWith(prefix)) {
-        stripped = currentPath.slice(prefix.length) || "/";
-      }
-    } else if (basePath) {
-      if (currentPath.startsWith(basePath)) {
-        stripped = currentPath.slice(basePath.length) || "/";
+      var langPrefix = "/" + currentLang;
+      if (currentPath.startsWith(langPrefix)) {
+        stripped = currentPath.slice(langPrefix.length) || "/";
       }
     }
+    if (repoPath && stripped.startsWith(repoPath)) {
+      stripped = stripped.slice(repoPath.length) || "/";
+    }
 
+    // Build new URL preserving the structure
     if (lang.code === "en") {
-      return basePath + stripped;
+      if (langBeforeRepo) {
+        return (repoPath || "") + stripped;
+      } else {
+        return (basePath || "") + stripped;
+      }
     } else {
-      return basePath + "/" + lang.code + (stripped.startsWith("/") ? stripped : "/" + stripped);
+      if (langBeforeRepo) {
+        // /fr/f-100d-manual/ structure
+        return "/" + lang.code + (repoPath || "") + (stripped.startsWith("/") ? stripped : "/" + stripped);
+      } else {
+        // /f-100d-manual/fr/ structure
+        return (basePath || "") + "/" + lang.code + (stripped.startsWith("/") ? stripped : "/" + stripped);
+      }
     }
   }
 
