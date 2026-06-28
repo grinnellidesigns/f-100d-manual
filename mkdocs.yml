@@ -3,9 +3,10 @@ plugins:
     - search
 
     # ── i18n ─────────────────────────────────────────────────────────────────
-    # To add a new language:
-    #   1. Create a translated version of the manual files (e.g. *.fr.md)
-    #   2. Add the locale configuration in the block below
+    # Pour ajouter une nouvelle langue :
+    #   1. Créez i18n/<code>.json  (copiez i18n/en.json et traduisez les valeurs)
+    #   2. Lancez : python scripts/translate.py --lang <code>
+    #   3. Ajoutez le bloc locale ci-dessous avec le bon code
     # ─────────────────────────────────────────────────────────────────────────
     - i18n:
         docs_structure: suffix        # utilise index.fr.md, page.fr.md, etc.
@@ -17,6 +18,102 @@ plugins:
             default: true
             name: English
             build: true
+          - locale: fr
+            name: Français
+            build: true
+            nav_translations:
+              Home: Accueil
+              Introduction: Introduction
+              Overview: Aperçu général
+              Definitions and Abbreviations: Définitions et Abréviations
+              Credits: Crédits
+              Cockpit: Cockpit
+              Instrument Panel: Tableau de bord
+              Cockpit Left Side: Côté gauche du cockpit
+              Cockpit Right Side: Côté droit du cockpit
+              Glare Shield and Above: Pare-soleil et partie supérieure
+              "Indicator, Caution, & Warning Lights": Voyants, Alertes et Avertissements
+              Stick and Throttle: Manche et Manette des gaz
+              Ejection Seat: Siège éjectable
+              DCS: DCS
+              Checklist: Check-list
+              Special Options: Options spéciales
+              Parameters: Paramètres
+              Aircraft Systems: Systèmes de l'appareil
+              Engine: Moteur
+              Electrical: Système électrique
+              Hydraulics: Hydraulique
+              Fuel: Carburant
+              Environmental: Environnement / Climatisation
+              "Oxygen System (MD-1 Oxygen Regulator)": Système oxygène (Régulateur MD-1)
+              Lighting Control Panel: Panneau de commande éclairage
+              Navigation Systems: Systèmes de navigation
+              Direction Gyro and Compass: Gyroscope directionnel et boussole
+              Radio Systems: Systèmes radio
+              ARC-34 UHF Command Radio: Radio UHF ARC-34
+              ARA-50 ADF System: Système ADF ARA-50
+              ARN-6 Radio Compass: Radiocompas ARN-6
+              ARN-72 TACAN: TACAN ARN-72
+              Seek Silence System: Système Seek Silence
+              AN/APX-72 IFF: IFF AN/APX-72
+              Camera Systems: Systèmes caméra
+              Gun Camera: Caméra canon
+              Strike Camera: Caméra de frappe
+              Defensive Systems: Systèmes défensifs
+              AN/APR-25 RHAW: RHAW AN/APR-25
+              Weapon Systems: Systèmes d'armes
+              Armament Control Panels: Panneaux de commande armement
+              Weapons Release Systems: Systèmes de largage d'armes
+              A-4 Gunsight: Viseur A-4
+              Guns: Canons
+              AIM-9 Sidewinder: Missile AIM-9 Sidewinder
+              AGM-45 Shrike: Missile AGM-45 Shrike
+              "AN/AJB-1 Low Altitude Bombing System": Système de bombardement AN/AJB-1
+              Weapon Release Tables: Tableaux de largage d'armes
+              Normal Procedures: Procédures normales
+              Preflight Check: Vérification prévol
+              Startup: Démarrage
+              Taxiing: Roulage
+              Takeoff: Décollage
+              Cruise: Croisière
+              Afterburner (AB) Operation During Flight: Utilisation de la postcombustion en vol
+              Descent: Descente
+              Landing: Atterrissage
+              Go-Around: Remise des gaz
+              Engine Shutdown: Arrêt moteur
+              Weapons Employment: Mise en œuvre des armes
+              Manual Delivery: Largage manuel
+              Sidewinders: Sidewinders
+              Emergency Procedures: Procédures d'urgence
+              Takeoff Emergencies: Urgences au décollage
+              Afterburner Failure During Takeoff: Panne de postcombustion au décollage
+              Engine Failure During Takeoff: Panne moteur au décollage
+              Illumination of the Fuel Valve Fail Light: Allumage du voyant Fuel Valve Fail
+              In-flight Emergencies: Urgences en vol
+              Air Start: Redémarrage en vol
+              Afterburner Failure: Panne de postcombustion
+              Ejection: Éjection
+              Canopy: Verrière
+              Engine Failure: Panne moteur
+              AC Generator: Générateur AC
+              Flight Controls: Commandes de vol
+              Fuel System: Système carburant
+              Heat and Vent Emergency: Urgence chauffage et ventilation
+              Jettison of External Load: Largage de la charge externe
+              Ram-Air Turbine Doors Open: Portes de turbine à air dynamique ouvertes
+              Spin Recovery: Récupération de vrille
+              Utility Hydraulic System Failure: Panne du circuit hydraulique auxiliaire
+              Yaw and Pitch Damper Emergency: Urgence amortisseurs de lacet et tangage
+              Landing Emergencies: Urgences à l'atterrissage
+              "Precautionary Landing Pattern (PLP)": Procédure d'atterrissage de précaution (PLP)
+              Recommended Glide: Plané recommandé
+              Landing Gear Emergency Operation: Opération d'urgence du train d'atterrissage
+              Landing With Arresting Hook Extended: Atterrissage avec crochet d'arrêt déployé
+              Tire Failure: Crevaison de pneu
+              Wheel Brakes Overheated: Freins en surchauffe
+              Extras: Suppléments
+              Research Series: Série de recherche
+              Official Soundtrack: Bande-son officielle
 
     # ── PDF / Print ───────────────────────────────────────────────────────────
     # - to-pdf: # this seems like the best pdf generator with the material scheme
@@ -176,7 +273,10 @@ extra:
     - name: "English"
       link: /
       lang: en
-  # Add a language here after creating its i18n/<code>.json file
+    - name: "Français"
+      link: /fr/
+      lang: fr
+  # Ajouter une langue ici après avoir créé son i18n/<code>.json et lancé translate.py
 
 extra_css:
   - css/i18n_switcher.css?v=2

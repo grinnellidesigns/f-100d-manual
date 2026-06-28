@@ -36,7 +36,7 @@ Output html file is in `site/`.
 
 Want to translate the manual into your language? See [TRANSLATING.md](./TRANSLATING.md) for the step-by-step guide.
 
-Current translations: English
+Current translations: English, Francais
 
 ## Contributions
 
