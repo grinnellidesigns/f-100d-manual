@@ -1,0 +1,191 @@
+{
+  "_meta": {
+    "language": "en",
+    "language_name": "English",
+    "description": "English source reference — do not translate this file, use it as the key reference",
+    "version": "1.0.0"
+  },
+
+  "site": {
+    "name": "DCS F-100D Manual",
+    "language_selector": "Language"
+  },
+
+  "nav": {
+    "home": "Home",
+    "introduction": "Introduction",
+    "overview": "Overview",
+    "definitions": "Definitions and Abbreviations",
+    "credits": "Credits",
+
+    "cockpit": "Cockpit",
+    "instrument_panel": "Instrument Panel",
+    "cockpit_left": "Cockpit Left Side",
+    "cockpit_right": "Cockpit Right Side",
+    "glare_shield": "Glare Shield and Above",
+    "lights_overview": "Indicator, Caution, & Warning Lights",
+    "stick_and_throttle": "Stick and Throttle",
+    "ejection_seat": "Ejection Seat",
+
+    "dcs": "DCS",
+    "checklist": "Checklist",
+    "special_options": "Special Options",
+    "parameters": "Parameters",
+
+    "aircraft_systems": "Aircraft Systems",
+    "engine": "Engine",
+    "electrical": "Electrical",
+    "hydraulics": "Hydraulics",
+    "fuel": "Fuel",
+    "environmental": "Environmental",
+    "oxygen_system": "Oxygen System (MD-1 Oxygen Regulator)",
+    "lighting_control_panel": "Lighting Control Panel",
+
+    "navigation_systems": "Navigation Systems",
+    "direction_gyro": "Direction Gyro and Compass",
+
+    "radio_systems": "Radio Systems",
+    "arc34": "ARC-34 UHF Command Radio",
+    "ara50": "ARA-50 ADF System",
+    "arn6": "ARN-6 Radio Compass",
+    "arn72": "ARN-72 TACAN",
+    "seek_silence": "Seek Silence System",
+    "iff": "AN/APX-72 IFF",
+
+    "camera_systems": "Camera Systems",
+    "gun_camera": "Gun Camera",
+    "strike_camera": "Strike Camera",
+
+    "defensive_systems": "Defensive Systems",
+    "rhaw": "AN/APR-25 RHAW",
+
+    "weapon_systems": "Weapon Systems",
+    "weapon_intro": "Introduction",
+    "armament_panels": "Armament Control Panels",
+    "weapons_release": "Weapons Release Systems",
+    "a4_gunsight": "A-4 Gunsight",
+    "guns": "Guns",
+    "aim9": "AIM-9 Sidewinder",
+    "agm45": "AGM-45 Shrike",
+    "labs": "AN/AJB-1 Low Altitude Bombing System",
+    "bomb_rockets": "Weapon Release Tables",
+
+    "normal_procedures": "Normal Procedures",
+    "preflight": "Preflight Check",
+    "startup": "Startup",
+    "taxiing": "Taxiing",
+    "takeoff": "Takeoff",
+    "cruise": "Cruise",
+    "afterburner_op": "Afterburner (AB) Operation During Flight",
+    "descent": "Descent",
+    "landing": "Landing",
+    "go_around": "Go-Around",
+    "shutdown": "Engine Shutdown",
+
+    "weapons_employment": "Weapons Employment",
+    "manual_delivery": "Manual Delivery",
+    "sidewinders": "Sidewinders",
+
+    "emergency_procedures": "Emergency Procedures",
+    "takeoff_emergencies": "Takeoff Emergencies",
+    "ab_fail_takeoff": "Afterburner Failure During Takeoff",
+    "engine_fail_takeoff": "Engine Failure During Takeoff",
+    "fuel_valve": "Illumination of the Fuel Valve Fail Light",
+    "inflight_emergencies": "In-flight Emergencies",
+    "air_start": "Air Start",
+    "afterburner_fail": "Afterburner Failure",
+    "ejection": "Ejection",
+    "canopy": "Canopy",
+    "engine_failure": "Engine Failure",
+    "ac_generator": "AC Generator",
+    "flight_controls": "Flight Controls",
+    "fuel_system": "Fuel System",
+    "heat_vent": "Heat and Vent Emergency",
+    "jettison": "Jettison of External Load",
+    "rat": "Ram-Air Turbine Doors Open",
+    "spin": "Spin Recovery",
+    "utility_hydraulic": "Utility Hydraulic System Failure",
+    "damper": "Yaw and Pitch Damper Emergency",
+    "landing_emergencies": "Landing Emergencies",
+    "plp": "Precautionary Landing Pattern (PLP)",
+    "glide": "Recommended Glide",
+    "gear": "Landing Gear Emergency Operation",
+    "hook": "Landing With Arresting Hook Extended",
+    "tire": "Tire Failure",
+    "brakes": "Wheel Brakes Overheated",
+
+    "extras": "Extras",
+    "research_series": "Research Series",
+    "official_soundtrack": "Official Soundtrack"
+  },
+
+  "index": {
+    "title": "DCS: F-100D Manual",
+    "disclaimer_heading": "Disclaimer",
+    "disclaimer_text": "This manual is work in progress. Not all items are completed, however included information should be accurate. If you find any inaccuracies please report them on our",
+    "disclaimer_github": "github",
+    "contents_heading": "Contents",
+    "contributions_heading": "Contributions",
+    "contributions_text": "This manual is open source and open for community contributions, if you wish to contribute please see the",
+    "contributions_link": "repository here",
+
+    "section_introduction": "Introduction",
+    "section_cockpit": "Cockpit",
+    "section_dcs": "DCS",
+    "section_systems": "Systems",
+    "section_procedures": "Procedures",
+    "section_extras": "Extras"
+  },
+
+  "introduction": {
+    "title": "F-100D Super Sabre",
+    "welcome_heading": "Welcome",
+    "history_heading": "History",
+    "pride_statement": "Grinnelli Designs is proud to present our DCS: F-100D Super Sabre!"
+  },
+
+  "definitions": {
+    "title": "Definitions and Abbreviations",
+    "intro": "Definitions and abbreviations used in the manual are covered here.",
+    "definitions_heading": "Definitions",
+    "col_designation": "Designation",
+    "col_equipment": "Equipment",
+    "notes_heading": "Notes, Warnings, and Cautions",
+    "note_label": "Non-safety critical information.",
+    "caution_label": "Possible situations that might arise (for example, due to interrelated system operation).",
+    "warning_label": "Time sensitive hazardous situations that require corrective action to avoid damage to the aircraft or injury to the pilot.",
+    "abbreviations_heading": "Abbreviations",
+    "col_abbreviation": "Abbreviation",
+    "col_meaning": "Meaning"
+  },
+
+  "credits": {
+    "title": "Credits",
+    "core_team": "Core Team",
+    "programming": "Programming",
+    "art_department": "Art Department",
+    "liveries": "Liveries & Skins",
+    "audio": "Audio",
+    "research": "Research",
+    "media": "Media Digital Infrastructure",
+    "demo_team": "Flight Sim Expo 2026 Demo Team",
+    "test_team": "Test Team",
+    "col_name": "Name",
+    "col_role": "Role"
+  },
+
+  "ui": {
+    "note": "Note",
+    "warning": "Warning",
+    "caution": "Caution",
+    "tip": "Tip",
+    "see_also": "See also",
+    "back_to_top": "Back to top",
+    "search_placeholder": "Search",
+    "next": "Next",
+    "previous": "Previous",
+    "table_of_contents": "Table of Contents",
+    "edit_page": "Edit this page",
+    "report_issue": "Report an issue"
+  }
+}

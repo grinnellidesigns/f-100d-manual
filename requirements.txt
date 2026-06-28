@@ -1,0 +1,7 @@
+# F-100D Manual — Python dependencies
+# Install with: pip install -r requirements.txt
+
+mkdocs>=1.5.0
+mkdocs-static-i18n>=1.2.0
+mkdocs-print-site-plugin>=2.3.0
+pymdown-extensions>=10.0

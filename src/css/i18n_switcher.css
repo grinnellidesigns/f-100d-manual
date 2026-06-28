@@ -1,0 +1,134 @@
+/* ================================================================
+   i18n Language Switcher — F-100D Manual
+   Premium sidebar dropdown menu styled specifically for Sphinx ReadTheDocs theme.
+   ================================================================ */
+
+.i18n-switcher {
+  display: block !important;
+  width: 100% !important;
+  padding: 10px 16px 14px 16px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+}
+
+.i18n-switcher,
+.i18n-switcher * {
+  box-sizing: border-box !important;
+}
+
+/* Custom Dropdown Container */
+.i18n-dropdown {
+  position: relative !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Dropdown Trigger Button */
+.i18n-dropdown__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.825rem;
+  font-family: "Lato", "Proxima Nova", "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.15s ease-in-out;
+}
+
+.i18n-dropdown__trigger:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.i18n-dropdown__trigger-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icons */
+.i18n-globe-icon {
+  width: 13px;
+  height: 13px;
+  opacity: 0.65;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.i18n-flag {
+  flex-shrink: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.i18n-dropdown__chevron {
+  width: 14px;
+  height: 14px;
+  opacity: 0.5;
+  transition: transform 0.18s ease-in-out;
+  box-shadow: none !important;
+}
+
+/* Rotate chevron when open */
+.i18n-dropdown--open .i18n-dropdown__chevron {
+  transform: rotate(180deg);
+  opacity: 0.8;
+}
+
+/* Dropdown Menu List */
+.i18n-dropdown__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #22252c;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.65);
+  z-index: 99999;
+  overflow: hidden;
+  padding: 4px 0;
+}
+
+/* Show menu when open */
+.i18n-dropdown--open .i18n-dropdown__menu {
+  display: block;
+}
+
+/* Dropdown option items */
+.i18n-dropdown__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.825rem;
+  font-family: "Lato", "Proxima Nova", "Helvetica Neue", Arial, sans-serif;
+  text-decoration: none;
+  transition: all 0.12s ease-in-out;
+}
+
+.i18n-dropdown__item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active language styling in menu */
+.i18n-dropdown__item--active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-weight: 600;
+  pointer-events: none;
+}

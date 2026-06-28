@@ -1,11 +1,29 @@
 site_name: DCS F-100D Manual
 plugins:
     - search
+
+    # ── i18n ─────────────────────────────────────────────────────────────────
+    # To add a new language:
+    #   1. Create a translated version of the manual files (e.g. *.fr.md)
+    #   2. Add the locale configuration in the block below
+    # ─────────────────────────────────────────────────────────────────────────
+    - i18n:
+        docs_structure: suffix        # utilise index.fr.md, page.fr.md, etc.
+        fallback_to_default: true     # si .fr.md absent → affiche le .md anglais
+        reconfigure_material: false
+        reconfigure_search: true
+        languages:
+          - locale: en
+            default: true
+            name: English
+            build: true
+
+    # ── PDF / Print ───────────────────────────────────────────────────────────
     # - to-pdf: # this seems like the best pdf generator with the material scheme
     #     author: Grinnelli Designs
     #     cover_subtitle: Grinnelli Designs
     #     copywrite: Grinnelli Designs
-    
+
     #- offline
     #- with-pdf:
     #    headless_chrome_path: C:/Program Files/Google/Chrome/Application/chrome.exe
@@ -151,3 +169,17 @@ nav:
     - Extras:
       - Research Series: ./Introduction/research-series.md
       - Official Soundtrack: ./Introduction/official-soundtrack.md
+
+# ── Sélecteur de langue ───────────────────────────────────────────────────────
+extra:
+  alternate:
+    - name: "English"
+      link: /
+      lang: en
+  # Add a language here after creating its i18n/<code>.json file
+
+extra_css:
+  - css/i18n_switcher.css?v=2
+
+extra_javascript:
+  - js/i18n_switcher.js?v=2
