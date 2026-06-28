@@ -21,11 +21,24 @@
     }
   ];
 
+  function getBasePath() {
+    var path = window.location.pathname;
+    // Detect if we're in a subdirectory like /f-100d-manual/
+    var match = path.match(/^\/[^\/]+/);
+    if (match && match[0] !== "/" && !LANGUAGES.some(function(l) { return path.startsWith("/" + l.code + "/"); })) {
+      return match[0];
+    }
+    return "";
+  }
+
   function detectCurrentLang() {
     var path = window.location.pathname;
+    var basePath = getBasePath();
+    var pathWithoutBase = basePath ? path.slice(basePath.length) : path;
+    
     for (var i = 0; i < LANGUAGES.length; i++) {
       var lang = LANGUAGES[i];
-      if (lang.code !== "en" && path.startsWith(lang.path)) {
+      if (lang.code !== "en" && pathWithoutBase.startsWith(lang.path)) {
         return lang.code;
       }
     }
@@ -34,20 +47,25 @@
 
   function buildTargetUrl(lang) {
     var currentPath = window.location.pathname;
+    var basePath = getBasePath();
     var currentLang = detectCurrentLang();
     var stripped = currentPath;
 
     if (currentLang !== "en") {
-      var prefix = "/" + currentLang;
+      var prefix = basePath + "/" + currentLang;
       if (currentPath.startsWith(prefix)) {
         stripped = currentPath.slice(prefix.length) || "/";
+      }
+    } else if (basePath) {
+      if (currentPath.startsWith(basePath)) {
+        stripped = currentPath.slice(basePath.length) || "/";
       }
     }
 
     if (lang.code === "en") {
-      return stripped;
+      return basePath + stripped;
     } else {
-      return "/" + lang.code + (stripped.startsWith("/") ? stripped : "/" + stripped);
+      return basePath + "/" + lang.code + (stripped.startsWith("/") ? stripped : "/" + stripped);
     }
   }
 
