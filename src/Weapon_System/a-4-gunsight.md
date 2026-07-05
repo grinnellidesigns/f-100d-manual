@@ -32,10 +32,10 @@ The range dial indicates the current target range in feet being used by the sigh
 
 The Range Sweep Knob (dial 6 below) is found next to the Auxiliary Release Buttons, and reduces the maximum lock-on distance for the radar, preventing the radar from locking onto undesirable objects such as the ground or ground objects. During normal operation at altitudes 6,000 feet or higher above ground level, the rheostat should be at MAX.
 
-| Range Limit | Setting (feet) |
-|-------------|----------------|
-| **MIN**     | 3,000 |
-| **MAX**     | 9,000 |
+| Range Limit | Setting    |
+|-------------|------------|
+| **MIN**     | 3,000 feet |
+| **MAX**     | 9,000 feet |
 
 The value changes linearly between the min and max settings.
 
@@ -51,9 +51,11 @@ The primary or secondary filament in the dual-filament sight reticle bulb powere
 
 ### Manual Ranging Control (Throttle)
 
-for automatic radar ranging, the throttle grip is normally in the full counter-clockwise position. Twisting the throttle grip clockwise decreases range from 12,000–2,700 feet.
+A twist control of the spring-loaded throttle grip allowas manual ranging for use when radar ranging is inoperable or too erratic. The manual range covers a 1,500 feet segment of the total range from 2,700–1,200 feet,
 
-Rotating the throttle full counter-clockwise returns ranging to automatic operation.
+Ranges are shown on the sight range dial, and the reticle diameter is controlled by the throttle grip's twist control.
+
+Rotating the throttle grip further clockwise returns ranging to automatic operation.
 
 ![Manual Ranging Control (Throttle) Image](./img/throttle_rotation.png)
 
@@ -85,11 +87,11 @@ Pressing the radar reject button also sets the [Sight Selector Switch](#1-sight-
 
 There are three options rocket, gun, bomb. 
 
-| Selection  | Range (feet)  | Electrically Caged
-|------------|---------------|-------------------
+| Selection  | Range                      | Electrically Caged |
+|------------|----------------------------|--------------------|
 | **GUN**    | Range from radar or manual | Free to move unless electrical cage is depressed
-| **ROCKET** | 850 (fixed) | Caged to [ECSL](#electrically-caged-sight-line-ecsl) + Depression Angle
-| **BOMB**   | 850 (fixed) | Caged to [ECSL](#electrically-caged-sight-line-ecsl) + 10° (used with [automatic bombing mode])(#bomb-air-to-ground-automatic)
+| **ROCKET** | 850 feet (fixed)           | Caged to [ECSL](#electrically-caged-sight-line-ecsl) + Depression Angle |
+| **BOMB**   | 850 feet (fixed)           | Caged to [ECSL](#electrically-caged-sight-line-ecsl) + 10° (used with [automatic bombing mode])(#bomb-air-to-ground-automatic) |
 
 !!! caution
     If the [radar reject button](#radar-reject-button) is depressed, this switch automatically moves to the GUN position.
@@ -102,11 +104,11 @@ This sets the depression from the boresight in mils when either in the rocket or
 
 This switch sets the effective velocity of the own aircraft and the closure rate for the sight calculations. Each setting is phrased in terms of the target velocity.
 
-| Selection | Own Speed (knots) | Target Speed (knots) | Closure Rate (knots)
-|-----------|-------------------|----------------------|---------------------
-| **TR**    | 300               | 200                  | 100
-| **HI**    | 600               | 500                  | 100
-| **LO**    | 600               | 200                  | 400
+| Selection | Own Speed (knots) | Target Speed (knots) | Closure Rate (knots) |
+|-----------|-------------------|----------------------|----------------------|
+| **TR**    | 300               | 200                  | 100                  |
+| **HI**    | 600               | 500                  | 100                  |
+| **LO**    | 600               | 200                  | 400                  |
 
 ## Operation
 
