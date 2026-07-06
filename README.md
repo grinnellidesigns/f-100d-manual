@@ -14,21 +14,29 @@ The exact structure is to be discussed.
 
 ## Install
 
-`pip install mkdocs`
-
-`pip install mkdocs-print-site-plugin`
+```
+pip install mkdocs mkdocs-static-i18n mkdocs-print-site-plugin
+```
 
 ## View
 
-`mkdocs serve --livereload`
+```
+python -m mkdocs serve
+```
 
 ## Build
 
-`mkdocs build`
+```
+python -m mkdocs build
+```
 
-> Note: for venv mkdocs can be run with `python -m mkodcs ...`
+Output html file is in `site/`.
 
-Output html file is in site/print_page, material theme should be used for links to work.
+## Translations
+
+Want to translate the manual into your language? See [TRANSLATING.md](./TRANSLATING.md) for the step-by-step guide.
+
+Current translations: English, Francais
 
 ## Contributions
 

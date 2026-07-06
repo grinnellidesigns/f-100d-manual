@@ -1,2 +1,9 @@
 book/
 site/
+
+# Translation cache (auto-generated, do not commit)
+i18n/translation_cache.json
+
+# Python
+__pycache__/
+*.pyc

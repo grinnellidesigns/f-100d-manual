@@ -16,19 +16,22 @@ jobs:
                 lfs: true
 
             - name: Install MKDocs and plugins
-              run: python -m pip install mkdocs mkdocs-print-site-plugin
+              run: python -m pip install -r requirements.txt
 
             - name: Build site
               run: python -m mkdocs build
 
+            - name: Verify site directory
+              run: ls -la site/
+
             - name: Build Docker image
-              run: docker build -t ghcr.io/${{ github.repository_owner }}/f-100d-manual:latest .
+              run: docker build -t ghcr.io/${{ github.repository_owner | lower }}/f-100d-manual:latest .
 
             - name: Login to ghcr.io
-              run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
+              run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.repository_owner | lower }} --password-stdin
 
             - name: Push to ghcr.io
-              run: docker push ghcr.io/${{ github.repository_owner }}/f-100d-manual:latest
+              run: docker push ghcr.io/${{ github.repository_owner | lower }}/f-100d-manual:latest
             
             - name: Delete older versions
               uses: actions/delete-package-versions@v5

@@ -1,0 +1,193 @@
+{
+  "_meta": {
+    "language": "fr",
+    "language_name": "Français",
+    "description": "Traductions françaises — Ajouter une langue = copier ce fichier, renommer en <code>.json, traduire les valeurs (ne pas changer les clés)",
+    "version": "1.0.0",
+    "translators": ["Grinnelli Designs"],
+    "completeness": "100%"
+  },
+
+  "site": {
+    "name": "DCS F-100D Manuel",
+    "language_selector": "Langue"
+  },
+
+  "nav": {
+    "home": "Accueil",
+    "introduction": "Introduction",
+    "overview": "Aperçu général",
+    "definitions": "Définitions et Abréviations",
+    "credits": "Crédits",
+
+    "cockpit": "Cockpit",
+    "instrument_panel": "Tableau de bord",
+    "cockpit_left": "Côté gauche du cockpit",
+    "cockpit_right": "Côté droit du cockpit",
+    "glare_shield": "Pare-soleil et partie supérieure",
+    "lights_overview": "Voyants, Alertes et Avertissements",
+    "stick_and_throttle": "Manche et Manette des gaz",
+    "ejection_seat": "Siège éjectable",
+
+    "dcs": "DCS",
+    "checklist": "Check-list",
+    "special_options": "Options spéciales",
+    "parameters": "Paramètres",
+
+    "aircraft_systems": "Systèmes de l'appareil",
+    "engine": "Moteur",
+    "electrical": "Système électrique",
+    "hydraulics": "Hydraulique",
+    "fuel": "Carburant",
+    "environmental": "Environnement / Climatisation",
+    "oxygen_system": "Système oxygène (Régulateur MD-1)",
+    "lighting_control_panel": "Panneau de commande éclairage",
+
+    "navigation_systems": "Systèmes de navigation",
+    "direction_gyro": "Gyroscope directionnel et boussole",
+
+    "radio_systems": "Systèmes radio",
+    "arc34": "Radio UHF ARC-34",
+    "ara50": "Système ADF ARA-50",
+    "arn6": "Radiocompas ARN-6",
+    "arn72": "TACAN ARN-72",
+    "seek_silence": "Système Seek Silence",
+    "iff": "IFF AN/APX-72",
+
+    "camera_systems": "Systèmes caméra",
+    "gun_camera": "Caméra canon",
+    "strike_camera": "Caméra de frappe",
+
+    "defensive_systems": "Systèmes défensifs",
+    "rhaw": "RHAW AN/APR-25",
+
+    "weapon_systems": "Systèmes d'armes",
+    "weapon_intro": "Introduction",
+    "armament_panels": "Panneaux de commande armement",
+    "weapons_release": "Systèmes de largage d'armes",
+    "a4_gunsight": "Viseur A-4",
+    "guns": "Canons",
+    "aim9": "Missile AIM-9 Sidewinder",
+    "agm45": "Missile AGM-45 Shrike",
+    "labs": "Système de bombardement à basse altitude AN/AJB-1",
+    "bomb_rockets": "Tableaux de largage d'armes",
+
+    "normal_procedures": "Procédures normales",
+    "preflight": "Vérification prévol",
+    "startup": "Démarrage",
+    "taxiing": "Roulage",
+    "takeoff": "Décollage",
+    "cruise": "Croisière",
+    "afterburner_op": "Utilisation de la postcombustion en vol",
+    "descent": "Descente",
+    "landing": "Atterrissage",
+    "go_around": "Remise des gaz",
+    "shutdown": "Arrêt moteur",
+
+    "weapons_employment": "Mise en œuvre des armes",
+    "manual_delivery": "Largage manuel",
+    "sidewinders": "Sidewinders",
+
+    "emergency_procedures": "Procédures d'urgence",
+    "takeoff_emergencies": "Urgences au décollage",
+    "ab_fail_takeoff": "Panne de postcombustion au décollage",
+    "engine_fail_takeoff": "Panne moteur au décollage",
+    "fuel_valve": "Allumage du voyant Fuel Valve Fail",
+    "inflight_emergencies": "Urgences en vol",
+    "air_start": "Redémarrage en vol",
+    "afterburner_fail": "Panne de postcombustion",
+    "ejection": "Éjection",
+    "canopy": "Verrière",
+    "engine_failure": "Panne moteur",
+    "ac_generator": "Générateur AC",
+    "flight_controls": "Commandes de vol",
+    "fuel_system": "Système carburant",
+    "heat_vent": "Urgence chauffage et ventilation",
+    "jettison": "Largage de la charge externe",
+    "rat": "Portes de turbine à air dynamique ouvertes",
+    "spin": "Récupération de vrille",
+    "utility_hydraulic": "Panne du circuit hydraulique auxiliaire",
+    "damper": "Urgence amortisseurs de lacet et tangage",
+    "landing_emergencies": "Urgences à l'atterrissage",
+    "plp": "Procédure d'atterrissage de précaution (PLP)",
+    "glide": "Plané recommandé",
+    "gear": "Opération d'urgence du train d'atterrissage",
+    "hook": "Atterrissage avec crochet d'arrêt déployé",
+    "tire": "Crevaison de pneu",
+    "brakes": "Freins en surchauffe",
+
+    "extras": "Suppléments",
+    "research_series": "Série de recherche",
+    "official_soundtrack": "Bande-son officielle"
+  },
+
+  "index": {
+    "title": "DCS : Manuel du F-100D",
+    "disclaimer_heading": "Avertissement",
+    "disclaimer_text": "Ce manuel est en cours de rédaction. Toutes les sections ne sont pas finalisées, mais les informations incluses devraient être exactes. Si vous trouvez des inexactitudes, signalez-les sur notre",
+    "disclaimer_github": "dépôt GitHub",
+    "contents_heading": "Sommaire",
+    "contributions_heading": "Contributions",
+    "contributions_text": "Ce manuel est open source et ouvert aux contributions de la communauté. Si vous souhaitez contribuer, consultez le",
+    "contributions_link": "dépôt ici",
+
+    "section_introduction": "Introduction",
+    "section_cockpit": "Cockpit",
+    "section_dcs": "DCS",
+    "section_systems": "Systèmes",
+    "section_procedures": "Procédures",
+    "section_extras": "Suppléments"
+  },
+
+  "introduction": {
+    "title": "F-100D Super Sabre",
+    "welcome_heading": "Bienvenue",
+    "history_heading": "Historique",
+    "pride_statement": "Grinnelli Designs est fier de vous présenter le DCS : F-100D Super Sabre !"
+  },
+
+  "definitions": {
+    "title": "Définitions et Abréviations",
+    "intro": "Les définitions et abréviations utilisées dans ce manuel sont présentées ici.",
+    "definitions_heading": "Définitions",
+    "col_designation": "Désignation",
+    "col_equipment": "Équipement",
+    "notes_heading": "Notes, Avertissements et Mises en garde",
+    "note_label": "Information non critique pour la sécurité.",
+    "caution_label": "Situations possibles pouvant survenir (par exemple, dues à des interactions entre systèmes).",
+    "warning_label": "Situations dangereuses urgentes nécessitant une action corrective pour éviter des dommages à l'appareil ou des blessures au pilote.",
+    "abbreviations_heading": "Abréviations",
+    "col_abbreviation": "Abréviation",
+    "col_meaning": "Signification"
+  },
+
+  "credits": {
+    "title": "Crédits",
+    "core_team": "Équipe principale",
+    "programming": "Programmation",
+    "art_department": "Département artistique",
+    "liveries": "Livrées et décorations",
+    "audio": "Son",
+    "research": "Recherche",
+    "media": "Infrastructure numérique et médias",
+    "demo_team": "Équipe de démonstration Flight Sim Expo 2026",
+    "test_team": "Équipe de test",
+    "col_name": "Nom",
+    "col_role": "Rôle"
+  },
+
+  "ui": {
+    "note": "Note",
+    "warning": "Avertissement",
+    "caution": "Mise en garde",
+    "tip": "Conseil",
+    "see_also": "Voir aussi",
+    "back_to_top": "Retour en haut",
+    "search_placeholder": "Rechercher",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "table_of_contents": "Table des matières",
+    "edit_page": "Modifier cette page",
+    "report_issue": "Signaler un problème"
+  }
+}
