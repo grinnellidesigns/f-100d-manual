@@ -6,7 +6,7 @@ plugins:
     # ── i18n ─────────────────────────────────────────────────────────────────
     # To add a new language:
     #   1. Create i18n/<code>.json (copy i18n/en.json and translate values)
-    #   2. Run: python scripts/translate.py --lang <code>
+    #   2. Create translated markdown files (filename.<code>.md) under src/
     #   3. Add the locale block below with the correct code
     # ─────────────────────────────────────────────────────────────────────────
     - i18n:

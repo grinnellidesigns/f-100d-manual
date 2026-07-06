@@ -7,8 +7,6 @@ f-100d-manual/
     i18n/
         en.json          - English reference (source of truth)
         fr.json          - French translations (complete)
-    scripts/
-        translate.py     - Script to generate .{lang}.md files
     mkdocs.yml           - mkdocs-static-i18n plugin configured
 ```
 
@@ -18,10 +16,7 @@ f-100d-manual/
 # 1. Install dependencies
 pip install -r requirements.txt
 
-# 2. Generate translated FR files
-python scripts/translate.py --lang fr
-
-# 3. Start the documentation server
+# 2. Start the documentation server
 mkdocs serve
 # -> http://127.0.0.1:8000     (EN)
 # -> http://127.0.0.1:8000/fr/ (FR)
@@ -54,13 +49,11 @@ Example:
 }
 ```
 
-### Step 2 - Generate the translated files
+### Step 2 - Create translated markdown files
 
-```bash
-python scripts/translate.py --lang de
-```
+For each page you want to translate, create a file named `filename.<lang_code>.md` in the same directory as the original `filename.md` in `src/`. For example, `src/Engine/engine.de.md`.
 
-This generates a `page.de.md` file for each `page.md` in `src/`.
+Translate the content inside these files.
 
 ### Step 3 - Register the language in mkdocs.yml
 
@@ -79,23 +72,8 @@ Under `plugins > i18n > languages`, add:
 ### Step 4 - Run
 
 ```bash
+# Start the documentation server to test
 mkdocs serve
-```
-
-## Useful Commands
-
-```bash
-# List available languages
-python scripts/translate.py --list
-
-# Check key parity (audit)
-python scripts/translate.py --lang fr --audit
-
-# Force regeneration (overwrite existing)
-python scripts/translate.py --lang fr --force
-
-# Dry run (no files written)
-python scripts/translate.py --lang fr --dry-run
 ```
 
 ## JSON File Structure
@@ -122,8 +100,7 @@ The following pages have a complete integrated translation:
 - `Introduction/definitions.md` -> `Introduction/definitions.fr.md`
 - `credits.md` -> `credits.fr.md`
 
-All other pages display a stub with a note indicating the page is not yet translated
-(fallback to English version).
+All other pages display the translated headers/stubs or fallback to the English version.
 
 ## Key Naming Rules
 
